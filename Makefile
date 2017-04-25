@@ -1,9 +1,9 @@
 main:main.o ops.o
-	gcc main.o ops.o -o main
+	gcc $^ -o main
 main.o:main.c
-	gcc -c main.c
+	gcc -c $^
 ops.o:ops.c
-	gcc -c ops.c
+	gcc -c $^
 
 .PHONY: clean
 clean:
